@@ -62,16 +62,22 @@ onAuthStateChanged(auth, (user) => {
 
 
 
-// var logout = document.getElementById("username12");
-// logout.addEventListener("click", () => {
-//     signOut(auth).then(() => {
-//         // Sign-out successful.
-//         window.location.href = "./index.html"
-//     }).catch((error) => {
-//         // An error happened.
-//         window.location.href = "./home.html"
-//     });
-// });
+var logout = document.getElementById("username12");
+logout.addEventListener("click", () => {
+    var prop = prompt("you want to logout")
+    if(prop === "yes"){
+        
+    signOut(auth).then(() => {
+        // Sign-out successful.
+        window.location.href = "./index.html"
+    }).catch((error) => {
+        // An error happened.
+        window.location.href = "./home.html"
+    });
+});
+    }else{
+    alert("your account was not logout")
+    }
 
 
 
