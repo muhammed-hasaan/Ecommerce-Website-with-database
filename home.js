@@ -62,17 +62,17 @@ onAuthStateChanged(auth, (user) => {
 
 
 
-var logout = document.getElementById("username12");
-logout.addEventListener("click", () => {
+// var logout = document.getElementById("username12");
+// logout.addEventListener("click", () => {
         
-    signOut(auth).then(() => {
-        // Sign-out successful.
-        window.location.href = "./index.html"
-    }).catch((error) => {
-        // An error happened.
-        window.location.href = "./home.html"
-    });
-});
+//     signOut(auth).then(() => {
+//         // Sign-out successful.
+//         window.location.href = "./index.html"
+//     }).catch((error) => {
+//         // An error happened.
+//         window.location.href = "./home.html"
+//     });
+// });
 
 
 
