@@ -64,8 +64,6 @@ onAuthStateChanged(auth, (user) => {
 
 var logout = document.getElementById("username12");
 logout.addEventListener("click", () => {
-    var prop = prompt("you want to logout")
-    if(prop === "yes"){
         
     signOut(auth).then(() => {
         // Sign-out successful.
@@ -75,9 +73,7 @@ logout.addEventListener("click", () => {
         window.location.href = "./home.html"
     });
 });
-    }else{
-    alert("your account was not logout")
-    }
+
 
 
 
