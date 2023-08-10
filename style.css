@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.navbar{
+    /* padding-top: 15px; */
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #272C3D;
+    width: 100% !important;
+    color: white;
+    height: 80px;
+}
+.headingUl{
+    padding-left: 170px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 60px;
+}
+.headingUl > h2{
+    display: flex;
+    align-items: center;
+}
+.headingUl > h2 > p{
+    font-size: 15px;
+    color: black;
+}
+.headingUl > ul {
+    display: flex;
+    list-style: none;
+    column-gap: 20px;
+
+}
+.inputUl{
+    padding-right: 170px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 30px;
+}
+.inputUl > ul{
+    display: flex;
+    column-gap: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+}
+.inputUl > input {
+    background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-512.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 30px;
+padding-left: 40px;    
+width: 270px;
+height: 40px;
+/* border: none; */
+border-radius: 10px;
+}
+.hero{
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    padding-top: 200px;
+    background-color: #10162A;
+    color: white;
+    height: 500px;
+    margin-top: 70px;
+}
+.hero > .headings{
+    padding-left: 195px;
+    
+}
+.hero > .headings > h1 {
+    font-size: 55px;
+}
+.hero > .headings > p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.hero > .headings > a >  button {
+    font-size: 15px;
+    width: 100px;
+    height: 50px;
+    background-color: #5147E8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+.image1{
+padding-right: 90px;
+margin-top: -190px;
+}
+/* .imagehero{
+ margin-top: -180px;  
+ width: 600px;
+ height: 600px;
+  
+} */
+.imagehero {
+    margin-top: 0;
+    width: 800px;
+    max-width: 600px;
+    height: 690px;
+}
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+    .headingUl {
+        padding-left: 50px;
+    }
+    
+    .inputUl {
+        padding-right: 50px;
+    }
+    
+    .hero {
+        padding: 100px 20px;
+    }
+    
+    .hero > .headings {
+        padding-left: 0;
+    }
+    
+    .image1 {
+        padding-right: 50px;
+    }
+    
+    .imagehero {
+        margin-top: 0;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .headingUl {
+        padding-left: 100px;
+    }
+    
+    .inputUl {
+        padding-right: 100px;
+    }
+    
+    .hero > .headings {
+        padding-left: 100px;
+    }
+    
+    .image1 {
+        padding-right: 100px;
+    }
+}
+.stlecards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.styleimg1{
+    width: 290px;
+    height: 290px;
+    border-radius: 20px;
+    background-image: url('https://next-shop-gilt.vercel.app/_next/image?url=https%3A%2F%2Fxcdn.next.co.uk%2Fcommon%2Fitems%2Fdefault%2Fdefault%2Fpublications%2Fg26%2Fshotzoom%2F4003%2F591-248s.jpg%3Fim%3DResize%2Cwidth%3D364&w=1920&q=75');
+    background-size: cover;
+    background-position: center;
+}
+.styleimg1:hover{
+    width: 290px;
+    background:linear-gradient( #cecbcb,rgba(255, 255, 255, 0.5)),url('https://next-shop-gilt.vercel.app/_next/image?url=https%3A%2F%2Fxcdn.next.co.uk%2Fcommon%2Fitems%2Fdefault%2Fdefault%2Fpublications%2Fg26%2Fshotzoom%2F4003%2F591-248s.jpg%3Fim%3DResize%2Cwidth%3D364&w=1920&q=75');
+    height: 290px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+}
+.styleimg2{
+    width: 290px;
+    height: 290px;
+    border-radius: 20px;
+    background-image:url('https://next-shop-gilt.vercel.app/_next/image?url=https%3A%2F%2Fxcdn.next.co.uk%2Fcommon%2Fitems%2Fdefault%2Fdefault%2Fpublications%2Fg22%2Fshotzoom%2F743%2F157-063s.jpg%3Fim%3DResize%2Cwidth%3D364&w=1920&q=75');
+    background-size: cover;
+    background-position: center;
+}
+.styleimg2:hover{
+    width: 290px;
+    background:linear-gradient( #cecbcb,rgba(255, 255, 255, 0.5)),url('https://next-shop-gilt.vercel.app/_next/image?url=https%3A%2F%2Fxcdn.next.co.uk%2Fcommon%2Fitems%2Fdefault%2Fdefault%2Fpublications%2Fg22%2Fshotzoom%2F743%2F157-063s.jpg%3Fim%3DResize%2Cwidth%3D364&w=1920&q=75');
+    height: 290px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+}
+.styleimg3{
+    width: 290px;
+    height: 290px;
+    border-radius: 20px;
+    background-image:url('https://next-shop-gilt.vercel.app/_next/image?url=https%3A%2F%2Fxcdn.next.co.uk%2Fcommon%2Fitems%2Fdefault%2Fdefault%2Fpublications%2Fg76%2Fshotzoom%2F2008%2Fu41-261s.jpg%3Fim%3DResize%2Cwidth%3D364&w=1920&q=75');
+    background-size: cover;
+    background-position: center;
+}
+.styleimg3:hover{
+    width: 290px;
+    background:linear-gradient( #cecbcb,rgba(255, 255, 255, 0.5)),url('https://next-shop-gilt.vercel.app/_next/image?url=https%3A%2F%2Fxcdn.next.co.uk%2Fcommon%2Fitems%2Fdefault%2Fdefault%2Fpublications%2Fg76%2Fshotzoom%2F2008%2Fu41-261s.jpg%3Fim%3DResize%2Cwidth%3D364&w=1920&q=75');
+    height: 290px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+}
+.styleimg4{
+    width: 290px;
+    height: 290px;
+    border-radius: 20px;
+    background-image:url('https://next-shop-gilt.vercel.app/_next/image?url=https%3A%2F%2Fxcdn.next.co.uk%2Fcommon%2Fitems%2Fdefault%2Fdefault%2Fpublications%2Fg86%2Fshotzoom%2F2074%2F328-225s.jpg%3Fim%3DResize%2Cwidth%3D364&w=1920&q=75');
+    background-size: cover;
+    background-position: center;
+}
+.styleimg4:hover{
+    width: 290px;
+    background:linear-gradient( #cecbcb,rgba(255, 255, 255, 0.5)),url('https://next-shop-gilt.vercel.app/_next/image?url=https%3A%2F%2Fxcdn.next.co.uk%2Fcommon%2Fitems%2Fdefault%2Fdefault%2Fpublications%2Fg86%2Fshotzoom%2F2074%2F328-225s.jpg%3Fim%3DResize%2Cwidth%3D364&w=1920&q=75');
+    height: 290px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+}
+.cardhead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cards{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 150px;
+flex-wrap: wrap;
+column-gap: 20px;
+row-gap: 20px;
+width: 80%;
+}
+
+.cards > .card1{
+}
+.cards > .card1 > i{
+margin-top: 5px;
+
+}
+.cards > .card1 > h4{
+margin-top: 15px;
+
+}
+.cards > .card1 > button{
+margin-top: 15px;
+width: 100%;
+height: 50px;
+border: none;
+border-radius: 10px;
+
+}
+.cards > .card1 > img{
+width: 300px;
+height: 450px;
+
+}
+@media screen and (max-width:1400px) {
+    .headingUl{
+        padding-left: 70px;
+    }   
+    .inputUl{
+        padding-right: 70px;
+        
+    }   
+    .hero > .headings{
+        padding-left: 105px;
+        
+    }
+    .hero > .image1{
+        padding-right: 50px;
+        
+    }
+}

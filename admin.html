@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body style="background-color: #F3F4F6;">
+    <div style="display: flex;justify-content: center;align-items: center; height: 90vh;">
+
+        <div style="border-radius: 20px; display: flex;flex-direction: column; align-items: center;justify-content: center; height: 40vh; width: 30%; background-color:white;">
+            
+        <center>
+            <h1>Admin Pannel</h1>
+            <br><br>
+        <input style="width: 400px; height: 40px; border-radius: 20px; border: 1px solid gray;" placeholder="Product Name" type="text" id="PName">
+        <br><br>
+        <input style="width: 400px; height: 40px; border-radius: 20px; border: 1px solid gray;" placeholder="Product Price" type="text" id="PPrice">
+        <br><br>
+        <input type="file" id="File">
+        <br><br>
+        <button  style="width: 300px; height: 40px; border-radius: 20px; border: 1px solid gray;"id="signup">Add Product</button>
+       <br> <br> <a href="./home.html">back to home</a>
+    </center>
+</div>
+</div>
+<script type="module">
+        import { app, auth, db, storage } from "./firebase.mjs";
+        import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+        import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
+        import { ref, uploadBytes } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-storage.js";
+
+        // ...
+
+        // ...
+        var signupbtn = document.getElementById("signup");
+        signupbtn.addEventListener("click", async () => {
+            var pname = document.getElementById("PName").value;
+            var pprice = document.getElementById("PPrice").value;
+            var fileinp = document.getElementById("File");
+
+            const docRef = await addDoc(collection(db, "cards"), {
+                pname: pname,
+                pprice: pprice,
+                file: fileinp.value
+            });
+            console.log(docRef.id);
+
+            const file = fileinp.files[0]; // Get the selected file
+            const storageRef = ref(storage, pname); // Create a reference with the correct file path
+            await uploadBytes(storageRef, file);
+
+
+            // console.error("Error:", error);
+        });
+    </script>
+</body>
+
+</html>

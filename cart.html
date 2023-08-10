@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <a href="./home.html" style="text-decoration: none;"><h4>back to home</h4></a>
+        <h1>Carted Products</h1>
+    </center>
+    <hr>
+    <br><br><br><br>
+    <div id="contdiv" style="display: flex; justify-content: center; align-items: center;flex-direction: column;">
+
+    </div>
+  
+    <script type="module">
+        import { db, auth, storage } from "./firebase.mjs"
+import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+import { collection, query, onSnapshot, doc, where, addDoc , deleteDoc  } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
+import { ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-storage.js"
+      
+const q = query(collection(db, "cartedproduct"));
+        onSnapshot(q, (querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+document.getElementById("contdiv").innerHTML +=
+`
+<center>
+<div style="display:flex; jsutify-content:center; align-item:center; column-gap:20px; row-gap:20px;margin-top:30px;">
+            <img width="100px" height="100px" style="border-radius:100px;" src="${doc.data().url}" alt="">
+            <h3 style="margin-top:40px;">${doc.data().name}</h3>
+            <h4 style="margin-top:40px;">${doc.data().price}</h4>
+            <button style="width:70px; height:30px; margin-top:35px; border:none; border-radius:20px;background-color:red; color:white; font-size:15px;" onclick="delet('${doc.id}')">Delete</button>
+            </div>
+            </center>
+`
+
+
+            })
+            })
+
+         async function delet(id){
+                await deleteDoc(doc(db, "cartedproduct", id));
+                window.location.reload()
+            }
+            window.delet = delet
+    </script>
+</body>
+</html>

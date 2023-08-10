@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #F3F4F6;
+        }
+
+        .container {
+            background-color: white;
+            padding: 50px;
+            display: flex;
+            column-gap: 50px;
+            align-items: flex-start;
+            
+            width: 70%;
+            flex-direction: row;
+        }
+        .container2{
+            display: none;
+        }
+
+        @media screen and (max-width:1300px) {
+          .container{
+            display: none;
+          }
+            .container2{
+               background-color: white;
+            padding: 50px; 
+            display: flex;
+            column-gap: 50px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            /* align-items: flex-start;
+            width: 70%;
+            flex-direction: row; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar" style="position: absolute; top: 0;">
+        <div class="headingUl">
+            <h2>
+                <p>Next</p>NestShop
+            </h2>
+            <ul style="display: flex;align-items: center;">
+                <li><button
+                        style="padding: 10px; border-radius: 10px;color: white; background-color: #111827; border: none;"><a href="./home.html" style="text-decoration: none; color: white;">Home</a></button>
+                </li>
+                <li>Shop Now</li>
+            </ul>
+        </div>
+        <div class="inputUl">
+            <input type="text" placeholder="Search">
+            <ul>
+                <a href="./cart.html" style="color: white; text-decoration: none;"><li><i class="fa-solid fa-bag-shopping"></i></li></a>  
+                <li id="username12"><a id="ankeruser" style="color: white; text-decoration: none;"
+                        href="./index.html">Hello ,<br>
+                        <p>Sign In</p>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+    <div class="main" style="margin-top: 100px;  display: flex; justify-content: center; align-items: center;flex-wrap: wrap;">
+        
+        <div class="container" >
+        <div style="padding-left: 50px;">
+
+                <img style=" border-radius: 20px; width: 400px; height: 550px; margin-top: 25px; " src="" id="image"
+                    alt="">
+                <br><br><br>
+                <h2>Customer Reviews</h2>
+                <p> <i style="color: purple;" class="fa-solid fa-star"></i><i style="color: purple;"
+                        class="fa-solid fa-star"></i><i style="color: purple;" class="fa-solid fa-star"></i><i
+                        style="color: purple;" class="fa-solid fa-star"></i><i style="color: purple;"
+                        class="fa-solid fa-star"></i>
+                    Based on 1 reviews</p>
+                <p>To write a review, you must first
+                <p style="color: purple;">Sign in</p>
+                </p>
+            </div>
+            <div>
+                <h1 style="margin-top: 25px;" id="name"></h1>
+                <h3 style="margin-top: 10px;" id="price"></h3>
+                <i style="color: purple; margin-top: 10px; " class="fa-solid fa-star"></i><i style="color: purple;"
+                    class="fa-solid fa-star"></i><i style="color: purple;" class="fa-solid fa-star"></i><i
+                    style="color: purple;" class="fa-solid fa-star"></i><i style="color: purple;"
+                    class="fa-solid fa-star"></i>
+                <p style="font-size: 16.1px; margin-top: 10px;">Quisque varius diam vel metus mattis, id aliquam diam
+                    rhoncus. Proin vitae magna in dui finibus malesuada et at nulla. Morbi elit ex, viverra vitae ante
+                    vel, blandit feugiat ligula. Fusce fermentum iaculis nibh, at sodales leo maximus a. Nullam
+                    ultricies sodales nunc, in pellentesque lorem mattis quis. Cras imperdiet est in nunc tristique
+                    lacinia. Nullam aliquam mauris eu accumsan tincidunt. Suspendisse velit ex, aliquet vel ornare vel,
+                    dignissim a tortor.</p>
+                <p style="font-size: 16.5px;">
+                    <br>
+                    Morbi ut sapien vitae odio accumsan gravida. Morbi vitae erat auctor, eleifend nunc a, lobortis
+                    neque. Praesent aliquam dignissim viverra. Maecenas laucs odio, feugiat eu nunc sit amet, maximus
+                    sagittis dolor. Vivamus nisi sapien, elementum sit amet eros sit amet, ultricies cursus ipsum. Sed
+                    consequat luctus ligula. Curabitur laoreet rhoncus blandit. Aenean vel diam ut arcu pharetra
+                    dignissim ut sed leo. Vivamus faucibus, ipsum in vestibulum vulputate, lorem orci convallis quam,
+                    sit amet consequat nulla felis pharetra lacus. Duis semper erat mauris, sed egestas purus commodo
+                    vel.
+                </p>
+                <br>
+                <h3 id="Brand">Brand :</h3><br>
+                <h3 id="Category">Category :</h3><br>
+                <h3 id="Category">This product is available</h3><br>
+
+                <button
+                    style="width: 300px; border: none; border-radius: 10px; height: 50px; color: white; background-color: #5147E8 ;" id="cart1">Add
+                    to Bag</button>
+            </div>
+        </div>
+
+
+
+        <!-- for mobile -->
+        
+        
+        
+        
+        
+        
+    </div>
+    
+    
+    
+    <div class="main1" style="margin-top: 100px;  display: flex; justify-content: center; align-items: center;flex-wrap: wrap;">
+
+<div class="container2" >
+<div style="padding-left: 50px;">
+
+        <img style=" border-radius: 20px; width: 400px; height: 550px; margin-top: 25px; " src="" id="image1"
+            alt="">
+        <br><br><br>
+    </div>
+    <div>
+        <h1 style="margin-top: 25px;" id="name1"></h1>
+        <h3 style="margin-top: 10px;" id="price1"></h3>
+        <i style="color: purple; margin-top: 10px; " class="fa-solid fa-star"></i><i style="color: purple;"
+            class="fa-solid fa-star"></i><i style="color: purple;" class="fa-solid fa-star"></i><i
+            style="color: purple;" class="fa-solid fa-star"></i><i style="color: purple;"
+            class="fa-solid fa-star"></i>
+        <p style="font-size: 16.1px; margin-top: 10px;">Quisque varius diam vel metus mattis, id aliquam diam
+            rhoncus. Proin vitae magna in dui finibus malesuada et at nulla. Morbi elit ex, viverra vitae ante
+            vel, blandit feugiat ligula. Fusce fermentum iaculis nibh, at sodales leo maximus a. Nullam
+            ultricies sodales nunc, in pellentesque lorem mattis quis. Cras imperdiet est in nunc tristique
+            lacinia. Nullam aliquam mauris eu accumsan tincidunt. Suspendisse velit ex, aliquet vel ornare vel,
+            dignissim a tortor.</p>
+        <p style="font-size: 16.5px;">
+            <br>
+            Morbi ut sapien vitae odio accumsan gravida. Morbi vitae erat auctor, eleifend nunc a, lobortis
+            neque. Praesent aliquam dignissim viverra. Maecenas laucs odio, feugiat eu nunc sit amet, maximus
+            sagittis dolor. Vivamus nisi sapien, elementum sit amet eros sit amet, ultricies cursus ipsum. Sed
+            consequat luctus ligula. Curabitur laoreet rhoncus blandit. Aenean vel diam ut arcu pharetra
+            dignissim ut sed leo. Vivamus faucibus, ipsum in vestibulum vulputate, lorem orci convallis quam,
+            sit amet consequat nulla felis pharetra lacus. Duis semper erat mauris, sed egestas purus commodo
+            vel.
+        </p>
+        <br>
+        <h3 id="Brand">Brand :</h3><br>
+        <h3 id="Category">Category :</h3><br>
+        <h3 id="Category">This product is available</h3><br>
+        <button
+        style="width: 300px; border: none; border-radius: 10px; height: 50px; color: white; background-color: #5147E8 ;" id="cart">Add
+        to Bag</button>
+        <br><br>
+        <br><br>
+        <br><br>
+        <hr>
+        <br><br>
+                <h2>Customer Reviews</h2>
+                <p> <i style="color: purple;" class="fa-solid fa-star"></i><i style="color: purple;"
+                        class="fa-solid fa-star"></i><i style="color: purple;" class="fa-solid fa-star"></i><i
+                        style="color: purple;" class="fa-solid fa-star"></i><i style="color: purple;"
+                        class="fa-solid fa-star"></i>
+                    Based on 1 reviews</p>
+                <p>To write a review, you must first
+                <p style="color: purple;">Sign in</p>
+                </p>
+    </div>
+</div>
+</div>
+
+
+        <div style="font-weight: 200px;  height: 50px; background-color:  #272C3D; margin-top: 100px; display: flex; justify-content: flex-start; align-items: center; padding-left: 200px; color: white;"
+        class="foooter">
+        <div class="container1"
+        style="font-weight: 200; display: flex; justify-content: flex-start; align-items: center;">
+        <h4>© 2023 NextShop. All rights reserved.</h4>
+    </div>
+</div>
+    <script type="module">
+        import { db, auth, storage } from "./firebase.mjs"
+import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+import { collection, query, onSnapshot, doc, where, addDoc } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
+import { ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-storage.js"
+        //         import { db, auth, storage } from "./firebase.mjs"
+        // import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+        // import { collection, query, onSnapshot, doc, where, addDoc } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
+        // import { ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-storage.js"
+
+        // const q1 = query(collection(db, "detaildata"));
+        //         onSnapshot(q1, (querySnapshot) => {
+        //             querySnapshot.forEach((doc) => {
+        var name = localStorage.getItem("name")
+        var price = localStorage.getItem("price")
+        var url = localStorage.getItem("url")
+
+        document.getElementById("image").src = url
+        document.getElementById("name").innerText = name
+        document.getElementById("price").innerText ="$" + price
+        document.getElementById("image1").src = url
+        document.getElementById("name1").innerText = name
+        document.getElementById("price1").innerText ="$" + price
+
+            // })
+            // })
+
+            document.getElementById("cart").addEventListener("click" , async()=>{
+                try {
+    const docRef = await addDoc(collection(db, "cartedproduct"), {
+      name: name,
+      price:price,
+      url:url
+    });
+    Swal.fire({
+                    icon: "success",
+                    title: `Successfully your product has been carted`,
+                    text: "Admin Approved",
+                    showConfirmButton: false
+                })
+    console.log("Document written with ID: ", docRef.id);
+  } catch (error) {
+    // console.error("Error:", error);
+  }
+            })
+            document.getElementById("cart1").addEventListener("click" , async()=>{
+                try {
+    const docRef = await addDoc(collection(db, "cartedproduct"), {
+      name: name,
+      price:price,
+      url:url
+    });
+    Swal.fire({
+                    icon: "success",
+                    title: `Successfully your product has been carted`,
+                    text: "Admin Approved",
+                    showConfirmButton: false
+                })
+    console.log("Document written with ID: ", docRef.id);
+  } catch (error) {
+    // console.error("Error:", error);
+  }
+            })
+
+
+    </script>
+
+    <script type="module" src="./home.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="sweetalert2.all.min.js"></script>
+</body>
+
+
+</html>
